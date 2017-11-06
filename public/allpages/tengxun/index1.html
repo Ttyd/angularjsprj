@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div ng-controller="appctrl">
+
+    <button ng-style="stylectrl" ng-click="increase">增加</button>
+    <button ng-click="decrease">减少</button>
+    <div ng-bind="data"></div>
+
+    <div ng-style="divstyle">
+        <img ng-src={{product.imgsrc}} ng-style="imgsrcstyle">
+        <div ng-bind="product.name"></div>
+        <div ng-bind="product.age"></div>
+    </div>
+
+    搜索<input type="text" ng-model="test">
+    <h1 ng-repeat="x in names | filter:test | orderBy:'name' ">
+        {{x.name}}:{{x.sub}}
+    </h1>
+
+</div>
+<script src="../../javascripts/angular/angular.js"></script>
+<script src="../js/index1.js"></script>
+</body>
+</html>

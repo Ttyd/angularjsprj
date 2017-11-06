@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div ng-controller="ctrll">
+   <div my-customer></div>
+</div>
+
+    <div ng-controller="filterctrl as ctrl">
+        All inetries:
+        <div ng-repeat="array in ctrl.array">{{array | reverse |uppercase}}</div>
+        <div>------------------------------------</div>
+        <div ng-repeat="array in ctrl.array">{{array | reverse:true}}</div>
+        <div>------------------------------------</div>
+        <div ng-repeat="filterarray in ctrl.filterarray">{{filterarray}}</div>
+    </div>
+    <div ng-controller="test">
+        num <input type="text" ng-model="num"><br>
+        {{num | number}}<br>
+        {{num | number:2}}<br>
+        first name : <input type="text" ng-model="person.first"><br>
+        last name : <input type="text" ng-model="person.last"><br>
+        name : {{person | fullname}}<br>
+        name : {{person | fullname:'--'}}<br>
+        name : {{person | fullname:'' | uppercase}}<br>
+    </div>
+
+<script src="../../javascripts/angular/angular.js"></script>
+<script src="../js/template.js"></script>
+
+</body>
+</html>

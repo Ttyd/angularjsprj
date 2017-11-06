@@ -1,0 +1,44 @@
+*{
+    padding:0;
+    margin:0;
+}
+html,body{
+    width:100%;
+    height:100%;
+}
+html{
+    font-size:16px;
+}
+body{
+    min-height:100%;
+}
+.pagediv{
+    height: 100%;
+}
+.pagehead{
+    height:10%;
+    text-align: center;
+    font-size:3rem;
+    background-color: #ebcccc;
+}
+.pageleft{
+    float:left;
+    width:30%;
+    height:800px;
+    background-color: #dff0d8;
+}
+.pageleft  ul{
+    list-style: none;
+    text-align: center;
+}
+.pageleft ul li{
+    height:40px;
+    line-height:40px;
+    font-size: 20px;
+}
+.pageright{
+    float: left;
+    width:70%;
+    height:800px;
+    background-color: #eee;
+}

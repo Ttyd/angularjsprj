@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="formapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div[contenteditable]{
+            cursor: pointer;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+<div ng-controller="formcontroller" >
+    <form name="form" class="css-form" novalidate>
+        <h1>登录</h1>
+        <div>
+            用户名 <input type="text" ng-model="user.name">
+        </div>
+        <div>
+            密码 <input type="text" ng-model="user.pwd">
+        </div>
+        <div>
+            花费 <input type="number" ng-model="user.age" name="age" min="1" max="110" integer />
+            <span ng-show="form.age.$error.integer">这是一个无效的年龄 </span>
+            <span ng-show="form.age.$error.min || form.age.$error.max">年龄范围在1-110岁</span>
+            <br>
+            金额{{user.age |currency}}
+        </div>
+        <div contenteditable="true" ng-model="content" title="Click to edit">
+            append 都是飞洒地方的tag
+        </div>
+        <pre>model = </pre>
+
+        <div>
+            <button ng-click="reset()">重置</button>
+            <button ng-click="update(user)">保存</button>
+        </div>
+
+        <div>
+            你的用户信息是:{{user |json}}<br>
+           保存信息是:{{master | json}}
+        </div>
+
+    </form>
+</div>
+
+
+
+<!--<script src="../javascripts/jquery/jquery.min.js"></script>-->
+<script src="../../javascripts/angular/angular.js"></script>
+<script src="../js/form.js"></script>
+
+</body>
+</html>

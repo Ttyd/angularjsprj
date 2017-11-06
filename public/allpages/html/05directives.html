@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <div ng-controller="ctrl">
+       Directives指令  就是附加在HTML上的自定义标签，告诉angular在元素上附加某些指定的行为
+       <input type="text" ng-model="name" placeholder="请输入99">
+       <img ng-src="../img/{{name}}.jpg" alt="">
+   </div>
+
+
+<script src="../../javascripts/angular/angular.js"></script>
+<script src="../js/directives.js"></script>
+
+</body>
+</html>

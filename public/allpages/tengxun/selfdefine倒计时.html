@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="custom">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div ng-controller="setservice">
+    <h1>双向绑定一 ：view改变 model改变</h1>
+    <input type="number" ng-model="cont" >
+    <div ng-bind="cont"></div>
+    <br>
+    自定义服务 在您输入的字符创中以空格隔开<br>
+转换成二进制
+    <div>{{togetstring}}</div>
+    <br>
+    <h2>双向绑定二 ： model改变 view改变</h2>
+    <button ng-show="myswitch">click</button>
+    <br>
+    <button ng-disabled="myswitch">click</button>
+    <br>
+    <input type="checkbox" ng-model="myswitch">选中我
+    <br>
+    myswitch的值   ：   {{myswitch}}<br>
+<!--倒计时-->
+    <button ng-click="clickfun()" ng-disabled="checkbtn">{{clickcont}}</button>
+    <!--<input ng-click="clickfun()" ng-disabled="checkbtn" ng-model="showchange"/>-->
+
+</div>
+<script src="../../javascripts/angular/angular.js"></script>
+<script src="selfdefine.js"></script>
+</body>
+</html>

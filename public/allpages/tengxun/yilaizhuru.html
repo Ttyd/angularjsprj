@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="yilaiapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../javascripts/angular/angular.min.js"></script>
+</head>
+<body>
+<div ng-controller="yilaictrl">
+    正方形长<input type="number" ng-model="numbershow">
+    <br>
+    {{result}}<br>
+
+
+</div>
+<div ng-controller="rectctrl">
+    长方形的长 <input type="number" ng-model="length">
+    长方形的宽 <input type="number" ng-model="width">
+    <br>
+    {{rectarea}}<br>
+     <button ng-click="computearea()">点击计算结果</button>{{rectarea2}}
+</div>
+
+
+<script src="../../javascripts/angular/angular.js"></script>
+<script src="yilaizhuru.js"></script>
+
+</body>
+</html>

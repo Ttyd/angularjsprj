@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="formapps">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../javascripts/bootstrap/css/bootstrap.min.css">
+    <style>
+        .displayinline{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div ng-controller="formctrl">
+        <div class="container text-center">
+            <h1>用户所有信息
+                <br>{{user | json}}
+            </h1>
+            <div class="form-group ">
+                <label for="name">用户名</label>
+                <div class="displayinline">
+                    <input type="text" id="name" ng-model="user.name" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="age" class="control-label">年龄</label>
+                <div class="displayinline">
+                    <input type="number" id="age" ng-model="user.age" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="sel" class=""> 选择学历</label>
+                <select name="" id="sel" ng-model="user.education" ng-init="s=sites[0]">
+                    <option ng-repeat="s in sites" value="{{s.site}}">{{s.site}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" ng-model="checksel" id="selagree">
+                <label for="selagree">同意条款</label>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-success " ng-click="sub()" ng-disabled="!checksel">提交</button>
+            </div>
+
+            <h1>引入外部文件</h1>
+            第一种
+            <div ng-include="'importfile.html'"></div>
+            第二种<div ng-include="importtag">
+            </div>
+            还有一种
+            <br> {{secondimportfile}}
+
+        </div>
+    </div>
+
+
+<script src="../../javascripts/jquery/jquery.min.js"></script>
+<script src="../../javascripts/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../javascripts/angular/angular.js"></script>
+<script src="bootstrapangangular.js"></script>
+</body>
+</html>

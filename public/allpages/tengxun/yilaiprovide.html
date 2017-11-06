@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="provideapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div ng-controller="providectrl">
+    长方形的长 <input type="number" ng-model="length">
+    长方形的宽 <input type="number" ng-model="width">
+    <br>
+    {{rectarea}}
+
+</div>
+<div ng-controller="constantctrl">
+    常量constant的值： {{constanttag}}
+</div>
+
+<script src="../../javascripts/angular/angular.js"></script>
+<script src="yilaiprovide.js"></script>
+
+</body>
+</html>

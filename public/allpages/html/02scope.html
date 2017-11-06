@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="moduleapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <div ng-controller="MyController">
+        Your name:
+        <input type="text" ng-model="username">
+        <button ng-click='sayHello()'>greet</button>
+        <div>{{greet}}</div>
+    </div>
+</div>
+
+<script src="../../javascripts/angular/angular.js"></script>
+<script src="../js/scope.js"></script>
+
+</body>
+</html>
