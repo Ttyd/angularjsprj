@@ -15,6 +15,10 @@ app.controller('appctrl',function($scope,$location,$http,$timeout ,$interval ,se
     $http({method:"get",url:"getmethod.json"}).then(function(response){
         $scope.list=response.data;
     })
+    var text={'textcont':'post过来的内容'};
+    $http.post('geturl.php',text).success(function(data){
+        console.log(data.data);
+    })
 
     $scope.content ='等待两秒种';
     $timeout(function(){
