@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .bgcolor{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div ng-app="app1">
+        <div ng-controller="classctrl">
+            <div ng-cloak ng-class="{red:true,bgcolor:true}">
+                {{textchange}}
+            </div>
+            <details>
+                <summary>详细</summary>
+                <div>点击显示出的内容</div>
+            </details>
+        </div>
+    </div>
+
+    <script src="../../../javascripts/angular/angular.min.js"></script>
+    <script>
+        var app=angular.module('app1',[])
+                .controller('classctrl',function($scope){
+                    $scope.textchange="改变字体的样式"
+                })
+    </script>
+</body>
+</html>

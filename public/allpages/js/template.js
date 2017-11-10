@@ -2,11 +2,27 @@
  * Created by Iauto001 on 2017/10/13.
  */
 var app=angular.module('myapp',[]);
-    app.controller('ctrll',function($scope){
+
+    app.controller('appctrl',function($scope){
         $scope.customer = {
             name:'maoni',
             address:'beijing 13234'
         };
+        $scope.daxie='XiaoXieXiMu'
+        $scope.daxie=angular.uppercase($scope.daxie);
+        $scope.xiaoxie=angular.lowercase($scope.daxie);
+        $scope.a={age:12};
+        $scope.b={name:"aaa"};
+        $scope.jicheng=angular.toJson(angular.extend($scope.daxie,$scope.xiaoxie))
+        console.log(angular.extend($scope.b,$scope.a))
+        console.log(angular.toJson(angular.extend($scope.b,$scope.a),true))
+
+        var obj={ name:'maoni',address:'beijing 13234'};
+        var result=[];
+        angular.forEach(obj,function(val,key){
+            this.push(key+';'+val);
+        },result)
+        console.log(result)
 
     });
    app.directive('myCustomer',function(){

@@ -9,6 +9,10 @@
 <div ng-controller="appctrl">
    <div my-customer></div>
     {{textconttag}}
+    {{daxie}}
+    {{xiaoxie}}
+    {{jicheng}}
+    <br>
 </div>
 
     <div ng-controller="filterctrl as ctrl">
@@ -18,6 +22,9 @@
         <div ng-repeat="array in ctrl.array">{{array | reverse:true}}</div>
         <div>------------------------------------</div>
         <div ng-repeat="filterarray in ctrl.filterarray">{{filterarray}}</div>
+        <br>
+        {{ 2017111108403| date:"yyyy-MM-dd hh:mm:ss"}}
+        {{123.56 |number:1}}
     </div>
     <div ng-controller="test">
         num <input type="text" ng-model="num"><br>
@@ -28,6 +35,13 @@
         name : {{person | fullname}}<br>
         name : {{person | fullname:'--'}}<br>
         name : {{person | fullname:'' | uppercase}}<br>
+        <input type="text" ng-model="name"><br>
+        {{
+        [{"name":"a12","age":12},
+        {"name":"a13","age":13},
+        {"name":"a21","age":22},
+        {"name":"a22","age":22}]
+        |filter : name}}
     </div>
 
 <script src="../../javascripts/angular/angular.js"></script>

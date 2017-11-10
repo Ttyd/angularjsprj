@@ -7,27 +7,28 @@
 </head>
 <body>
 
-<div ng-controller="appctrl">
-    当前页面的url：
-    <h3>{{myurl}}</h3>
-    <h4> {{mywelcom}}</h4>
-    <h5>{{content}}</h5>
-    <h6>{{nowtime}}</h6>
+    <div ng-controller="appctrl">
+        当前页面的url：
+        <h3>{{myurl}}</h3>
+        <h4> {{mywelcom}}</h4>
+        <h5>{{timeoutcontent}}</h5>
+        <h5>{{applycontent}}</h5>
+        <h6>{{nowtime}}</h6>
 
-    <div>获取getmethod中的数据
-            {{list}}
-        <div ng-repeat=" da in list">
-            {{da.name}}---{{da.age}}
+        <div>获取getmethod中的数据
+                {{list}}
+            <div ng-repeat=" da in list">
+                {{da.name}}---{{da.age}}
+            </div>
+        </div>
+        <br>
+        {{textconttag}}
+
+        <div>
+            自定义服务{{togetstring}}
         </div>
     </div>
-    <br>
-    {{textconttag}}
-
-<div>
-    自定义服务{{togetstring}}
-</div>
-</div>
-
+    <div style="color: red;">{{runmethod}}</div>
 <script src="../../javascripts/angular/angular.js"></script>
 <script src="geturl.js"></script>
 
